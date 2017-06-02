@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+.form {
+    position: relative;
+    top : 50px;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 350px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form .or
+{
+    color:	#A0A0A0 ;
+}
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    background-color: #3093c7;
+    background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+    background-image: linear-gradient(to bottom, #3093c7, #1c5a85);
+}
+.form button:hover,.form button:active,.form button:focus {
+    background: #237fed;
+    background: -webkit-linear-gradient(top, #237fed, #1c5a85);
+    background: linear-gradient(to bottom, #237fed, #1c5a85);
+}
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+.form .message a{
+    color: #1a6bcc;
+    text-decoration: none;
+}
+.form .signup-form {
+    display: none;
+}
+.form .mess {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 15px;
+    float: left;
+}
+.form .mess a {
+    color: #1a6bcc;
+    text-decoration: none;
+}
+.form .mes {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+.form .mes a {
+    color: #1a6bcc;
+    text-decoration: none;
+}
+.form .forgot-form {
+    display: none;
+}
+.copyrights
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+body {
+    background-image: url("sea1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*background: #63a2ed; /* fallback for old browsers */
+/*background: -webkit-linear-gradient(#63a2ed, #7daae0);
+background: -moz-linear-gradient(#63a2ed, #7daae0);
+background: -o-linear-gradient(#63a2ed, #7daae0);
+background: linear-gradient(#63a2ed, #b4d5ed);
+height: 690px;
+font-family: "Roboto", sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale; */
+}
