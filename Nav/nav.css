@@ -1,0 +1,128 @@
+
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-image: url("black.jpg");
+}
+.nav-bar {
+    width: 100%;
+}
+.nav-container {
+    overflow: hidden;
+    margin: 2.95% auto;
+}
+.nav-menu {
+    display: none;
+}
+nav.nav-bar ul {
+    list-style: none;
+}
+.nav-list {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+}
+.nav-list li {
+    float: left;
+    width:12.5%;
+}
+.nav-list li a {
+    display: block;
+    color: #000;
+    font-weight: bold;
+    font-family: 'lobster two';
+    padding: 10px 10px;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+    -o-transition:all 0.2s linear;
+    transition:all 0.2s linear;
+}
+.nav-list li a:hover {
+    padding-top: 30px ;
+}
+#tile1 {
+    background:	#F0F0F0;
+    background: linear-gradient(#F0F0F0,#FFFFFF);
+}
+#tile2 {
+    background:#E0E0E0;
+    background: linear-gradient(#E0E0E0,#F0F0F0);
+}
+#tile3 {
+    background:#D0D0D0;
+    background: linear-gradient(#D0D0D0,#F0F0F0);
+}
+#tile4 {
+    background:#C0C0C0;
+    background: linear-gradient(#C0C0C0,#F0F0F0);
+}
+#tile5 {
+    background:#B0B0B0;
+    background: linear-gradient(#B0B0B0,#E0E0E0);
+}
+#tile6 {
+    background:	#A0A0A0;
+    background: linear-gradient(#A0A0A0,#E0E0E0);
+}
+#tile7 {
+    background:#909090;
+    background: linear-gradient(#909090,#E0E0E0);
+}
+#tile8 {
+    background:	#808080;
+    background: linear-gradient(#808080,#D0D0D0);
+}
+@media screen and (max-width: 480px) {
+    .nav-container, .container {
+        background: #4f6f8f
+    }
+
+    .nav-menu {
+        color: #fff;
+        float: left;
+        display: block;
+        padding: 10px 10px;
+        cursor: pointer;
+    }
+
+    .nav-list {
+        float: left;
+        width: 100%;
+        height: 0;
+    }
+
+    .nav-open {
+        height: auto
+    }
+
+    .nav-list li {
+        width: 100%
+    }
+
+    .nav-list li a {
+        text-align: left;
+    }
+
+    .nav-list li a:hover {
+        padding-left: 36%;
+        padding-top: 30px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        .nav-container, .container {
+            margin: 8% auto;
+        }
+
+        .nav-list li {
+            float: left;
+            width: 50%;
+        }
+
+        .nav-list li a:hover {
+            padding-right: 40%;
+            padding-top: 30px;
+        }
+    }
+}
