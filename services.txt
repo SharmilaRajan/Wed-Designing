@@ -1,0 +1,43 @@
+package Services;
+
+import DAO.dao;
+import Entity.Pojo;
+
+public class Services {
+	
+	public Boolean createUser(Pojo p)
+	{  boolean status = false;
+	dao d = new dao();
+		try 
+		{
+			status=d.insertData(p);
+		} catch (Exception e) 
+		{
+			System.out.println(e);
+		}
+	
+		return status;
+		
+	}
+
+	public boolean searchVisitor(String username, String password) {
+		
+		boolean p = false;
+		dao d = new dao();
+		
+	try
+	{
+		p =d.SearchUser(username,password);
+	} 
+	
+	catch (Exception e) {
+		System.out.println(e);
+	}
+		return p;
+	}
+
+	
+
+}
+
+}

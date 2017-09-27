@@ -1,0 +1,66 @@
+package DAO;
+
+import java.sql.Connection;
+import java.sql.*;
+import java.sql.SQLException;
+
+
+
+import Entity.Pojo;
+import helper.DBConnectivity;
+
+public class  dao {
+	
+private  Connection con=null;
+Statement s ;
+PreparedStatement p1 ;
+ResultSet r;
+
+
+
+	public  boolean insertData(Pojo p) throws ClassNotFoundException, SQLException 
+	{
+		 con = DBConnectivity.createConnection();
+		 p1 = con.prepareStatement("insert into user values(?,?,?,?)");
+		 p1.setString(1, p.getUsername());
+		 p1.setString(2, p.getPassword());
+		 p1.setString(3, p.getEmail());
+		 p1.setInt(4, Integer.parseInt(p.getPhonenumber()));
+		
+		int fer =  p1.executeUpdate();
+		 
+		if(fer==1)
+		{
+			return true;
+		}
+		else{
+			 return false;
+		}
+		
+	}
+
+
+
+	public boolean SearchUser(String username, String password)throws  ClassNotFoundException, SQLException 
+	{
+	
+		con = DBConnectivity.createConnection();
+		 p1 = con.prepareStatement("select * from user where Username=? and passwd=? ");
+		 p1.setString(1, username);
+		 p1.setString(2, password);
+		 
+		 r= p1.executeQuery();
+		 if(r.next())
+			 return true;
+		 else
+			 return false;
+		 
+		 
+		 
+		 
+		
+	}
+
+
+
+}

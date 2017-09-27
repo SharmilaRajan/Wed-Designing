@@ -1,0 +1,73 @@
+package Controller;
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.portlet.ModelAndView;
+
+import Entity.Pojo;
+
+import Services.Services;
+
+@Controller
+public class First {
+	
+	@RequestMapping("reg.htm")
+	public ModelAndView Register(HttpServletRequest request, HttpServletResponse  response)
+	{
+		String username=request.getParameter("uname");
+		String password=request.getParameter("pwd");
+		String email=request.getParameter("mail");
+		String phoneno=request.getParameter("phone");
+		
+		Pojo p = new Pojo();
+		p.setUsername(username);
+		p.setPassword(password);
+		p.setEmail(email);
+		p.setPhonenumber(phoneno);
+		
+		Services sv = new Services();
+	 Boolean status = sv.createUser(p);
+	 
+	 
+	 ModelAndView mv = new ModelAndView();
+	 
+	 if(status==false)
+		{
+		mv.addObject("REGISTRATIONSTATUSMESSAGE", "User Registered Succesfully !!!");
+		mv.setViewName("/Registration.jsp");
+		}
+	 else
+		{
+		mv.addObject("REGISTRATIONSTATUSMESSAGE", "USERNAME already exists.. please register again with different USERNAME..");
+		mv.setViewName("/registration.jsp");
+		}		
+		return mv;
+	
+	}
+	
+	
+    @RequestMapping("Log.htm")
+    public void login(HttpServletRequest request, HttpServletResponse  response) throws IOException
+    {
+    	String username=request.getParameter("uname");
+		String password=request.getParameter("pwd");
+		boolean b=false;
+		
+		Services sv = new Services();
+		b=sv.searchVisitor(username, password);
+		if(b){
+			System.out.println("successfully executed");
+			response.sendRedirect("NewFile.jsp");
+		}
+		else{
+			System.out.println("username or password wrong");
+		
+		}
+		
+		
+	}
+}

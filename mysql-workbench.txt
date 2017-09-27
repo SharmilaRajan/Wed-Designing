@@ -1,0 +1,5 @@
+create table User 
+(Username varchar(20),
+ Passwd varchar (20), 
+ mail varchar(20),
+ Pno int)
